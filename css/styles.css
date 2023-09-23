@@ -8,6 +8,7 @@
     --c-accent: #E7E9FC;
     --c-border: #8E8F99;
     --c-icins-active: #31D0AA;
+    --c-modal-light: #FCFCFC;
 }
 
 body {
@@ -580,3 +581,118 @@ img {
 .footer-socials-item:focus {
     background-color: var(--c-icins-active);
 }
+
+/* Modal */
+.backdrop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(46, 47, 66, 0.40);
+    position: fixed;
+    inset: 0;
+    opacity: 1;
+    visibility: visible;
+    padding: 20px;
+}
+
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.modal {
+    position: relative;
+    padding: 24px;
+    max-width: 408px;
+    width: 100%;
+    height: 100%;
+    max-height: 584px;
+    overflow-y: auto;
+    border-radius: 4px;
+    background: var(--c-modal-light);
+}
+
+.modal-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+}
+
+.modal-title {
+    color: var(--c-master);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    margin-top: 24px;
+}
+
+.modal-filed {
+    margin-bottom: 8px;
+}
+
+.modal-label {
+    display: block;
+    color: var(--c-border);
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.04em;
+    margin-bottom: 8px;
+}
+
+.modal-input-wrap {
+    position: relative;
+    margin-bottom: 0px;
+}
+
+.modal-input-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input {
+    padding-left: 38px;
+    height: 40px;
+    width: 100%;
+    border-radius: 4px;
+    background: var(--c-modal-light);
+    border: 1px solid rgba(46, 47, 66, 0.40);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input:focus {
+    outline: none;
+    border-color: var(--c-brand);
+}
+
+.modal-input:focus+.modal-input-icon {
+    fill: var(--c-brand)
+}
+
+.modal-textarea {
+    height: 120px;
+    width: 100%;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    background: var(--c-modal-light);
+    border: 1px solid rgba(46, 47, 66, 0.40);
+    resize: none;
+    padding-left: 16px;
+    padding-top: 8px;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-textarea:focus {
+    outline: none;
+    border-color: var(--c-brand);
+}
+
+/* END Modal */
