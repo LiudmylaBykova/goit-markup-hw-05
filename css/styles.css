@@ -626,7 +626,7 @@ img {
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    margin-top: 24px;
+    margin-bottom: 16px;
 }
 
 .modal-filed {
@@ -677,11 +677,14 @@ img {
 }
 
 .modal-textarea {
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.04em;
     height: 120px;
     width: 100%;
     margin-bottom: 8px;
     border-radius: 4px;
-    background: var(--c-modal-light);
+    background-color: var(--c-modal-light);
     border: 1px solid rgba(46, 47, 66, 0.40);
     resize: none;
     padding-left: 16px;
@@ -693,6 +696,35 @@ img {
 .modal-textarea:focus {
     outline: none;
     border-color: var(--c-brand);
+}
+
+.modal-checkbox {
+    display: flex;
+}
+
+.modal-checkbox-check {}
+
+
+.modal-checkbox-icon {
+    fill: none;
+    margin-right: 8px;
+    stroke: var(--c-border, rgba(46, 47, 66, 0.40));
+}
+
+
+.modal-checkbox-label {
+    color: var(--c-border);
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.04em;
+}
+
+.modal-checkbox-label-accent {
+    color: var(--c-brand);
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.04em;
+    text-decoration-line: underline;
 }
 
 /* END Modal */
