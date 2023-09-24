@@ -409,7 +409,11 @@
     <!-- Modal -->
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <button class="modal-close" type="button" data-modal-close>X</button>
+            <button class="modal-close" type="button" data-modal-close>
+                <svg class="modal-close-icon" width="8" height="8">
+                    <use href="./images/icons.svg#icon-close"></use>
+                </svg>
+            </button>
             <h2 class="modal-title">Leave your contacts and we will call you back</h2>
             <form name="contact-form">
 
@@ -448,30 +452,16 @@
                     <textarea class="modal-textarea" id="user-comment" name="user-comment"
                         placeholder="Text input"></textarea>
                 </div>
-                <!-- <div class="modal-checkbox">
-                    <input class="modal-checkbox-input visually-hidden" id="privacy-policy" type="checkbox">
-                    <span class="modal-checkbox-check">
-                        <svg class="modal-checkbox-icon" width="16" height="16">
-                            <use href="./images/icons.svg#icon-checkbox"></use>
-                        </svg>
-                    </span>
-                    <label class="modal-checkbox-label" for="privacy-policy">I accept the terms and conditions of the
-                        <a class="modal-checkbox-label-accent" href="">Privacy Policy</a>
-                    </label>
-
-                </div> -->
 
                 <div class="modal-checkbox">
                     <input class="modal-checkbox-input visually-hidden" id="privacy-policy" type="checkbox">
-                    <span class="modal-checkbox-check">
-                        <svg class="unchecked" width="10" height="8">
-                            <use href="./images/icons.svg#icon-checkbox"></use>
-                        </svg>
-                        <svg class="checked" width="16" height="16">
-                            <use href="./images/icons.svg#icon-vector"></use>
-                        </svg>
-                    </span>
-                    <label class="modal-checkbox-label" for="privacy-policy">I accept the terms and conditions of the
+                    <label class="modal-checkbox-label" for="privacy-policy">
+                        <span class="modal-checkbox-icon">
+                            <svg class="checked" width="10" height="8">
+                                <use href="./images/icons.svg#icon-vector"></use>
+                            </svg>
+                        </span>
+                        I accept the terms and conditions of the
                         <a class="modal-checkbox-label-accent" href="">Privacy Policy</a>
                     </label>
                 </div>
