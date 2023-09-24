@@ -625,11 +625,6 @@ img {
     align-items: flex-end;
 }
 
-/* .footer-button-wrap {
-    display: flex;
-
-} */
-
 .footer-subscrybe-button {
     display: flex;
     align-items: center;
@@ -747,6 +742,10 @@ img {
 
 .modal-filed {
     margin-bottom: 8px;
+}
+
+.modal-filed-comment {
+    margin-bottom: 16px;
 }
 
 .modal-label {
