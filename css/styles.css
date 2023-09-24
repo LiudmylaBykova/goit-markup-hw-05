@@ -746,7 +746,7 @@ img {
 }
 
 .modal-filed {
-    margin-bottom: 16px
+    margin-bottom: 8px;
 }
 
 .modal-label {
@@ -790,11 +790,12 @@ img {
 
 .modal-input:focus {
     outline: none;
-    border-color: var(--c-brand);
+    border-color: #4D5AE5;
 }
 
 .modal-input:focus+.modal-input-icon {
-    fill: var(--c-brand)
+    fill: var(--c-brand);
+    border-color: #4D5AE5;
 }
 
 .modal-textarea {
@@ -818,7 +819,7 @@ img {
 
 .modal-textarea:focus {
     outline: none;
-    border-color: var(--c-brand);
+    border-color: #4D5AE5;
 }
 
 .modal-checkbox {
