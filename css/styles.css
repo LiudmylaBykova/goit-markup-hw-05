@@ -733,11 +733,9 @@ img {
     background-color: var(--c-brand-pres);
 }
 
-.modal .modal-close:hover .modal-close-icon,
-.modal .modal-close:focus .modal-close-icon {
+.modal-close:hover .modal-close-icon,
+.modal-close:focus .modal-close-icon {
     fill: var(--c-background-light);
-    border: none;
-    background-color: var(--c-brand-pres);
 }
 
 .modal-title {
