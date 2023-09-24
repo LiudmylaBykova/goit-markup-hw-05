@@ -601,16 +601,18 @@ img {
     height: 40px;
     color: var(--c-background-light);
     font-size: 12px;
-    line-height: 2;
+    line-height: 1.5;
     letter-spacing: 0.04em;
-    background-color: var(--c-master);
+    background-color: transparent;
     border-radius: 4px;
     border: 1px solid var(--c-background-light);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
+    padding-left: 16px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
+
 
 .footer-subscribe-input:focus {
     outline: none;
@@ -632,7 +634,6 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 16px;
     border-radius: 4px;
     border: none;
     margin: 0 auto;
@@ -657,6 +658,7 @@ img {
 
 .footer-subscribe-icon {
     fill: var(--c-background-light);
+    margin-left: 16px;
 }
 
 .footer-subscribe-form {
@@ -675,6 +677,7 @@ img {
     opacity: 1;
     visibility: visible;
     padding: 20px;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .is-hidden {
@@ -684,13 +687,18 @@ img {
 }
 
 .modal {
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
     padding: 72px 24px 24px 24px;
     min-width: 408px;
-    max-height: 584px;
+    min-height: 584px;
     overflow-y: auto;
     border-radius: 4px;
     background: var(--c-modal-light);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close {
@@ -703,22 +711,32 @@ img {
     position: absolute;
     top: 24px;
     right: 24px;
-    fill: var(--c-accent);
+    padding: 0;
+    cursor: pointer;
+    background-color: var(--c-accent);
     border: 1px solid rgba(0, 0, 0, 0.10);
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-icon {
     fill: var(--c-master);
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close:hover {
     border: none;
     fill: var(--c-background-light);
-    background-color: var(--c-brand);
+    background-color: var(--c-brand-pres);
+}
+
+.modal-close:focus {
+    border: none;
+    fill: var(--c-background-light);
+    background-color: var(--c-brand-pres);
 }
 
 .modal-title {
