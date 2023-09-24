@@ -623,10 +623,10 @@ img {
     align-items: flex-end;
 }
 
-.footer-button-wrap {
+/* .footer-button-wrap {
     display: flex;
 
-}
+} */
 
 .footer-subscrybe-button {
     display: flex;
@@ -659,6 +659,10 @@ img {
     fill: var(--c-background-light);
 }
 
+.footer-subscribe-form {
+    display: flex;
+    gap: 24px;
+}
 
 /* Modal */
 .backdrop {
