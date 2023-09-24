@@ -731,7 +731,11 @@ img {
 .modal-close:focus {
     border: none;
     background-color: var(--c-brand-pres);
-    fill: #ffffff;
+}
+
+.modal .modal-close:hover .modal-close-icon,
+.modal .modal-close:focus .modal-close-icon {
+    fill: var(--c-background-light);
 }
 
 .modal-title {
@@ -745,7 +749,7 @@ img {
 }
 
 .modal-filed {
-    margin-bottom: 8px;
+    margin-bottom: 16px
 }
 
 .modal-label {
@@ -770,6 +774,7 @@ img {
     transform: translateY(-50%);
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input {
@@ -796,6 +801,7 @@ img {
 }
 
 .modal-textarea {
+    outline: transparent;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
